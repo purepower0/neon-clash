@@ -401,7 +401,12 @@ export class Engine {
         this.banners.push({ main: "FIGHT", sub: "", t: 0, dur: 32, kind: "fight", color: "#ffe45e" });
         audio.play("fight");
       }
-      if (this.stateT >= 100) { this.roundState = "fight"; this.stateT = 0; }
+      if (this.stateT >= 100) {
+        this.roundState = "fight";
+        this.stateT = 0;
+        a.state = "idle"; a.stateT = 0;
+        b.state = "idle"; b.stateT = 0;
+      }
       return;
     }
 
