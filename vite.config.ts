@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 // https://vite.dev/config/
 export default defineConfig({
   // Relative asset paths keep the single-file build portable on GitHub Pages and file://.
-  base: "./",
+  base: "/neon-clash/",
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {
